@@ -130,7 +130,7 @@ class SOLOMotorControllersUart : public SOLOMotorControllers
         SOLOMotorControllersUtils *soloUtils;
 
     public:
-        SOLOMotorControllersUart(unsigned char _deviceAddress = 0, HardwareSerial &_serial = Serial ,  SOLOMotorControllers::UartBaudrate _baudrate = SOLOMotorControllers::UartBaudrate::rate115200, long _millisecondsTimeout = 200, int _packetFailureTrialAttempts = 5);
+        SOLOMotorControllersUart(unsigned char _deviceAddress = 0, HardwareSerial &_serial = Serial1 ,  SOLOMotorControllers::UartBaudrate _baudrate = SOLOMotorControllers::UartBaudrate::rate115200, long _millisecondsTimeout = 200, int _packetFailureTrialAttempts = 5);
 
     private:
         bool ExeCMD(unsigned char cmd[], int &error);
